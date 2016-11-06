@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/elona2011/node-proxy/issues"
   },
-  "homepage": "https://github.com/elona2011/node-proxy#readme"
+  "homepage": "https://github.com/elona2011/node-proxy#readme",
+  "dependencies": {
+    "http-proxy": "^1.15.2"
+  }
 }
