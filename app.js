@@ -36,7 +36,7 @@ var PROXY_PORT = 8000;
 var proxy, server;
 
 // Create a proxy server with custom application logic
-proxy = httpProxy.createProxy({});
+proxy = httpProxy.createProxyServer({});
 
 proxy.on('error', function (err) {
     console.log('ERROR');
@@ -45,7 +45,7 @@ proxy.on('error', function (err) {
 
 server = http.createServer(function (req, res) {
     //var finalUrl = req.url,
-    var finalUrl = 'https://www.google.com';
+    var finalUrl = req.url;
     var finalAgent = null;
     var parsedUrl = url.parse(finalUrl);
 
